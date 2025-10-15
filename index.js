@@ -1,8 +1,9 @@
 var http = require("http");
+var fs = require("fs");
 const port = 8000;
 
 http.createServer(function (req, res) {
-  fs.readfile ("index.html", function (err, data) {
+  fs.readFile ("index.html", function (err, data) {
     res.writeHead(200, { "Content-Type": "text/html" });
     res.end(data);
 })
